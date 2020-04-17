@@ -1,0 +1,48 @@
+$ cd --
+
+$ wget https://root.cern/download/root_v6.20.04.source.tar.gz
+
+$ sudo yum install git cmake gcc-c++ gcc binutils libX11-devel libXpm-devel libXft-devel libXext-devel
+
+$ sudo yum install gcc-gfortran openssl-devel pcre-devel mesa-libGL-devel mesa-libGLU-devel glew-devel ftgl-devel mysql-devel fftw-devel cfitsio-devel graphviz-devel avahi-compat-libdns_sd-devel libldap-dev python-devel libxml2-devel gsl-static
+
+$ mkdir root6
+
+$ mv root_v6.20.04.source.tar.gz root6
+
+$ cd root6
+
+$ tar xfzv root_v6.20.04.source.tar.gz
+
+$ mkdir root_v6.20.04-build
+
+$ cd root_v6.20.04-build
+
+$ cd --
+
+$ wget https://cmake.org/files/v3.15/cmake-3.15.0.tar.gz
+
+$ tar -zxvf cmake-3.15.0.tar.gz
+
+$ cd cmake-3.15.0
+
+$ sudo ./bootstrap --prefix=/usr/local
+
+$ sudo make
+
+$ sudo make install
+
+$ vi ~/.bash_profile PATH=/usr/local/bin:$PATH:$HOME/bin
+
+$ cmake --version
+
+$ cd -- 
+
+$ cd /home/[insert-here-your-user-name]/root6/root_v6.20.04-build
+
+$ cmake /home/[insert-here-your-user-name]/root6/root-6.20.04
+
+$ cmake --build . -- -jN
+
+
+                
