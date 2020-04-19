@@ -14,9 +14,9 @@ $ cd root6
 
 $ tar xfzv root_v6.20.04.source.tar.gz
 
-$ mkdir root_v6.20.04-build
+$ mkdir root-6.20.04-build
 
-$ cd root_v6.20.04-build
+$ cd root-6.20.04-build
 
 $ cd --
 
@@ -38,11 +38,17 @@ $ cmake --version
 
 $ cd -- 
 
-$ cd /home/[insert-here-your-user-name]/root6/root_v6.20.04-build
+$ cd /home/[insert-here-your-user-name]/root6/root-6.20.04-build
 
 $ cmake /home/[insert-here-your-user-name]/root6/root-6.20.04
 
 $ cmake --build . -- -jN
+
+$ source /home/[insert-here-your-username]/root6/root-6.20.04-build/bin/thisroot.sh
+
+$ root
+
+$ .q
 
 
                 
